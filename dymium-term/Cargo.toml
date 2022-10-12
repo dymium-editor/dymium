@@ -1,0 +1,16 @@
+[package]
+name = "dymium-term"
+version = "0.0.0"
+edition = "2021"
+
+# If you change which local crates we use here, make sure to update it in ARCHITECTURE.md
+[dependencies]
+bitflags = "1.3.2"
+serde = { version = "1.0.145", features = ["derive"] }
+serde_yaml = "0.9.13"
+thiserror = "1.0.37"
+
+[features]
+
+[[bin]]
+name = "verify-caps"

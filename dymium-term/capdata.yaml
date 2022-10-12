@@ -1,0 +1,190 @@
+# Default terminal capability data
+# 
+# Alacritty : terminal emulator
+#
+# (derived by manually checking)
+- name:
+    compact: alacritty
+    pretty: Alacritty
+    term: alacritty
+  style:
+    reset-all: true
+    set-color:
+      rgb:
+        konsole: true
+        xterm: true
+    unset-color: true
+    set-inverse: true
+    unset-inverse: true
+    set-italics: true
+    unset-italics: true
+    set-bold: true
+    set-faint: true
+    unset-bold-faint: true
+    set-underline:
+      fancy:
+        double: false
+        kitty: false
+    unset-underline: true
+  cursor:
+    basic-movement: true
+    set-style:
+      basic: true
+      xterm-extended: true
+    save-and-restore: true
+  scroll:
+    basic: true
+    set-region: true
+# Kitty : terminal emulator
+# 
+# (derived by manually checking and online docs)
+- name:
+    compact: kitty
+    pretty: Kitty
+    term: xterm-kitty
+  style:
+    reset-all: true
+    set-color:
+      rgb:
+        konsole: true
+        xterm: true
+    unset-color: true
+    set-inverse: true
+    unset-inverse: true
+    set-italics: true
+    unset-italics: true
+    set-bold: true
+    set-faint: true
+    unset-bold-faint: true
+    set-underline:
+      fancy:
+        double: true
+        kitty: true
+    unset-underline: true
+  cursor:
+    basic-movement: true
+    set-style:
+      basic: true
+      xterm-extended: true
+    save-and-restore: true
+  scroll:
+    basic: true
+    set-region: true
+# VTE : library (used by multiple others)
+# 
+# (derived by manually checking)
+- name:
+    compact: libvte
+    pretty: VTE
+    term: &vte-term xterm-256color
+  style: &vte-style
+    reset-all: true
+    set-color:
+      rgb:
+        konsole: true
+        xterm: false
+    unset-color: true
+    set-inverse: true
+    unset-inverse: false
+    set-italics: true
+    unset-italics: false
+    set-bold: true
+    set-faint: false
+    unset-bold-faint: true
+    set-underline:
+      fancy:
+        double: true
+        kitty: true
+    unset-underline: true
+  cursor: &vte-cursor
+    basic-movement: true
+    set-style:
+      basic: true
+      xterm-extended: true
+    save-and-restore: true
+  scroll: &vte-scroll
+    basic: true
+    set-region: true
+# GNOME Terminal : terminal emulator
+- name:
+    compact: gnome-terminal
+    pretty: GNOME Terminal
+    term: *vte-term
+  style: *vte-style
+  cursor: *vte-cursor
+  scroll: *vte-scroll
+# URxvt / Rxvt-Unicode : terminal emulator
+# 
+# (derived from `man 7 urxvt`)
+- name:
+    compact: urxvt
+    pretty: URxvt / Rxvt-Unicode
+    term: rxvt-unicode-256color
+  style:
+    reset-all: true
+    set-color:
+      rgb:
+        konsole: true
+        xterm: false
+    unset-color: true
+    set-inverse: true
+    unset-inverse: true
+    set-italics: true
+    unset-italics: true
+    set-bold: true
+    set-faint: false
+    unset-bold-faint: true
+    set-underline: Basic
+    unset-underline: true
+  cursor:
+    basic-movement: true
+    set-style:
+      basic: true
+      xterm-extended: true
+    save-and-restore: true
+  scroll:
+    basic: true
+    set-region: true
+# Xfce Terminal : terminal emulator
+- name:
+    compact: xfce-terminal
+    pretty: Xfce Terminal
+    term: *vte-term
+  style: *vte-style
+  cursor: *vte-cursor
+  scroll: *vte-scroll
+# XTerm : terminal emulator
+#
+# (derived from online docs)
+- name:
+    compact: xterm
+    pretty: XTerm
+    term: xterm
+  style:
+    reset-all: true
+    set-color:
+      rgb:
+        konsole: true
+        xterm: true
+    unset-color: false
+    set-inverse: true
+    unset-inverse: false
+    set-italics: true
+    unset-italics: false
+    set-bold: true
+    set-faint: true
+    unset-bold-faint: false
+    set-underline:
+      fancy:
+        double: true
+        kitty: false
+    unset-underline: true
+  cursor:
+    basic-movement: true
+    set-style:
+      basic: true
+      xterm-extended: true
+    save-and-restore: true
+  scroll:
+    basic: true
+    set-region: true
