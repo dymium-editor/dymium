@@ -2,6 +2,7 @@
 name = "dymium-term"
 version = "0.0.0"
 edition = "2021"
+license = "MIT or Apache-2.0"
 
 # If you change which local crates we use here, make sure to update it in ARCHITECTURE.md
 [dependencies]
